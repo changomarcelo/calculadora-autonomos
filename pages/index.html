@@ -27,7 +27,7 @@
   <meta name="msapplication-TileImage" content="../static/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <title>Calculadora Ganancias Autónomos 2017</title>
+  <title>Calculadora Ganancias Autónomos 2016</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,15 +50,15 @@
 
   <div class="container">                         
     <div id="share">
-      <span class="share facebook">
+      <!--span class="share facebook">
         <div class="fb-share-button" data-href="http://artools.github.io/ganancias2017" data-layout="button_count"></div>
-      </span>
+      </span-->
       <span class="share twitter">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="_kumaaa" data-hashtags="ganancias2017">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marceloruiz" data-hashtags="ganancias2017">Tweet</a>
       </span>
       <span class="copyright">
-        <span class="fondo-copyright">datos por <a href="https://twitter.com/arisetton" target="_blank">arisetton</a> y
-          desarrollo por <a href="https://twitter.com/_kumaaa" target="_blank">_kumaaa</a> </span>
+        <span class="fondo-copyright">por <a href="https://twitter.com/marceloruiz" target="_blank">marceloruiz</a>, inspirado por <a href="https://twitter.com/arisetton" target="_blank">arisetton</a> y
+          <a href="https://twitter.com/_kumaaa" target="_blank">_kumaaa</a> </span>
         </span>
       </div>
       <div class="row">
@@ -100,7 +100,7 @@
                 
                 
 
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                   <div class="form-group">
                     <label>Conyuge a Cargo</label>
                     <br>
@@ -114,7 +114,7 @@
 
               </div>
 
-              <div class="col-lg-4">
+              <!--div class="col-lg-4">
 
                 <div class="form-group">
                   <label>Jubilado</label>
@@ -141,7 +141,7 @@
                 value="1">Si
               </label>
             </div>
-          </div>
+          </div-->
 
           <div class="form-group">
             <label>Cantidad de Hijos ( Menores de 18 años )</label>
@@ -264,11 +264,71 @@
 </div>
 <!-- /.col-lg-6 -->
 <div class="col-lg-6">
-  <div class="panel panel-default">
-    <div class="panel-heading">
+
+	<!-- panel parametros -->
+	<div class="panel panel-default" id="parametros">
+	<div class="panel-heading">
+     Parámetros
+   	</div>
+   	<div class="panel-body">
+    
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label>Deducción especial</label>
+          <p class="text-danger"  id="deduccionEspecial"></p>
+        </div>
+        <div class="form-group">
+          <label>Deducción por cónyugue</label>
+          <p class="text-danger" id="deduccionConyugue"></p>
+        </div>
+        
+        <div class="form-group">
+          <label>Deducción por hijo</label>
+          <p class="text-danger"  id="deduccionHijo"></p>
+        </div>
+        
+        <div class="form-group">
+          <label>Ganancia no imponible</label>
+          <p class="text-danger"  id="gananciaNoImponible"></p>
+        </div>
+		
+		<div class="form-group">
+          <label>Seguro de vida máx.</label>
+          <p class="text-danger"  id="deduccSegVidaMax"></p>
+        </div>
+        
+        <div class="form-group">
+          <label>Seguro de retiro máx.</label>
+          <p class="text-danger"  id="deduccSegRetMax"></p>
+        </div>
+        
+        <div class="form-group">
+          <label>Porcentaje donaciones</label>
+          <p class="text-danger"  id="porcDonaciones"></p>
+        </div>
+
+		<div class="form-group">
+          <label>Intereses Hipotecarios máx.</label>
+          <p class="text-danger"  id="deduccionIntereses"></p>
+        </div>
+	
+
+      </div>
+      <!-- /.col-lg-6 (nested) -->
+    </div>
+    <!-- /.row (nested) -->
+  </div>
+  <!-- /.panel-body -->
+</div>
+	<!-- / panel parametros -->
+
+  <div class="panel panel-default" id="results">
+	<div class="panel-heading">
      Resultado
-   </div>
-   <div class="panel-body">
+   	</div>
+   	<div class="panel-body">
+    
     <div class="row">
       <div class="col-lg-12">
         <div class="form-group">
@@ -295,6 +355,9 @@
   <!-- /.panel-body -->
 </div>
 <!-- /.panel -->
+
+	
+
 </div>
 <!-- /.col-lg-6 -->
 </div>
