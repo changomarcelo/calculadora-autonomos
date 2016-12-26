@@ -181,15 +181,15 @@
 
 
          <div class="form-group">
-           <label>Servicio Doméstico Mensual</label>
+           <label>Servicio Doméstico x Mes</label>
            <div class="form-group input-group">
             <span class="input-group-addon">$</span>
             <input id="servicioDomestico" type="text" class="form-control">
             <span class="input-group-addon">.00</span>
           </div>
-          <p class="help-block">Gasto mensual</p>
         </div>			
 			
+		  <!--
           <div class="form-group">
            <label>Seguro de Retiro</label>
            <div class="form-group input-group">
@@ -199,39 +199,37 @@
           </div>
           <p class="help-block">Gasto anual</p>
         </div>
-        
+        -->
         <div class="form-group">
-           <label>Seguro de Vida</label>
+           <label>Seguro de Vida x Año</label>
            <div class="form-group input-group">
             <span class="input-group-addon">$</span>
             <input id="seguroVida" type="text" class="form-control">
             <span class="input-group-addon">.00</span>
           </div>
-          <p class="help-block">Gasto anual</p>
         </div>
 
 		<div class="form-group">
-           <label>Donaciones</label>
+           <label>Donaciones x Año</label>
            <div class="form-group input-group">
             <span class="input-group-addon">$</span>
             <input id="donaciones" type="text" class="form-control">
             <span class="input-group-addon">.00</span>
           </div>
-          <p class="help-block">Donaciones anuales</p>
         </div>
 		
 		<div class="form-group">
-           <label>Cuotas médicas</label>
+           <label>Cuotas médicas x Año</label>
            <div class="form-group input-group">
             <span class="input-group-addon">$</span>
             <input id="cuotasMedicas" type="text" class="form-control">
             <span class="input-group-addon">.00</span>
           </div>
-          <p class="help-block">Gasto anual</p>
+          <p class="help-block">Gasto anual.</p>
         </div>
         
         <div class="form-group">
-           <label>Honorarios médicos</label>
+           <label>Honorarios médicos x Año</label>
            <div class="form-group input-group">
             <span class="input-group-addon">$</span>
             <input id="honorariosMedicos" type="text" class="form-control">
@@ -241,7 +239,7 @@
         </div>
         
         <div class="form-group">
-           <label>Intereses Hipotecarios</label>
+           <label>Intereses Hipotecarios x Año</label>
            <div class="form-group input-group">
             <span class="input-group-addon">$</span>
             <input id="intereses" type="text" class="form-control">
@@ -250,6 +248,7 @@
           <p class="help-block">Total anual. El sistema calculará el deducible admitido</p>
         </div>
         
+		<!--
 		<div class="form-group">
 		  <label>Otras deducciones generales</label>
 		  <div class="form-group input-group">
@@ -259,7 +258,8 @@
 		  </div>
 		  <p class="help-block"></p>
 		</div>
-
+		-->
+		
         <div class="form-group" align="right">
          <button id="calcular" type="button" class="btn btn-success">Calcular</button>
        </div>
@@ -275,70 +275,7 @@
 <!-- /.col-lg-6 -->
 <div class="col-lg-6">
 
-	<!-- panel parametros -->
-	<div class="panel panel-default" id="parametros">
-	<div class="panel-heading">
-     Parámetros
-   	</div>
-   	<div class="panel-body">
-    
-    <div class="row">
-      <div class="col-lg-12">
 	
-		<div class="form-group">
-          <label>Ganancia no imponible</label>
-          <p class="text-danger"  id="gananciaNoImponible"></p>
-        </div>
-
-        <div class="form-group">
-          <label>Deducción por Servicio doméstico máxima</label>
-          <p class="text-danger"  id="deduccionServicioDomestico"></p>
-        </div>
-		<div class="form-group">
-          <label>Deducción especial</label>
-          <p class="text-danger"  id="deduccionEspecial"></p>
-        </div>
-        <div class="form-group">
-          <label>Deducción por cónyugue</label>
-          <p class="text-danger" id="deduccionConyugue"></p>
-        </div>
-        
-        <div class="form-group">
-          <label>Deducción por hijo</label>
-          <p class="text-danger"  id="deduccionHijo"></p>
-        </div>
-        
-        
-		
-		<div class="form-group">
-          <label>Seguro de vida máx.</label>
-          <p class="text-danger"  id="deduccSegVidaMax"></p>
-        </div>
-        
-        <div class="form-group">
-          <label>Seguro de retiro máx.</label>
-          <p class="text-danger"  id="deduccSegRetMax"></p>
-        </div>
-        
-        <div class="form-group">
-          <label>Porcentaje donaciones</label>
-          <p class="text-danger"  id="porcDonaciones"></p>
-        </div>
-
-		<div class="form-group">
-          <label>Intereses Hipotecarios máx.</label>
-          <p class="text-danger"  id="deduccionIntereses"></p>
-        </div>
-	
-
-      </div>
-      <!-- /.col-lg-6 (nested) -->
-    </div>
-    <!-- /.row (nested) -->
-  </div>
-  <!-- /.panel-body -->
-</div>
-	<!-- / panel parametros -->
 
   <div class="panel panel-default" id="results">
 	<div class="panel-heading">
@@ -348,19 +285,52 @@
     
     <div class="row">
       <div class="col-lg-12">
-        <div class="form-group">
-          <label>Ganancia Neta sujeta a impuesto</label>
-          <p class="text-danger"  id="gananciaNeta">$0</p>
+        
+		<div class="form-group">
+          <label>Resultado Neto</label>
+          <p class="text-primary"  id="resultado_neto">$0</p>
+        </div>
+
+		<div class="form-group">
+          <label>Ganancia No Imponible</label>
+          <p class="text-danger"  id="gananciaNoImponible">$0</p>
+        </div>
+
+		<div class="form-group">
+          <label>Deducción especial</label>
+          <p class="text-danger"  id="deduccionEspecial">$0</p>
         </div>
         <div class="form-group">
+          <label>Deducción por cónyugue</label>
+          <p class="text-danger" id="deduccionConyugue">$0</p>
+        </div>
+        
+        <div class="form-group">
+          <label>Deducción por hijo</label>
+          <p class="text-danger"  id="deduccionHijo">$0</p>
+        </div>
+
+		<div class="form-group">
+          <label>Deducciones Generales</label>
+          <p class="text-danger"  id="deduccionGeneral">$0</p>
+        </div>
+		
+		<div class="form-group">
+          <label>Ganancia Neta sujeta a impuesto</label>
+          <p class="text-success"  id="gananciaNeta">$0</p>
+        </div>
+
+        <div class="form-group">
           <label>Alicuota</label>
-          <p class="text-danger" id="alicuota">0%</p>
+          <p class="text-success" id="alicuota">0%</p>
+		  <p class="help-block" id="alicuota_help"></p>
+
         </div>
         
         <div class="form-group">
           <label>Impuesto Anual</label>
-          <p class="text-danger"  id="impuestoAnual">$0</p>
-		  <p class="help-block">Sobre este monto se descuentan anticipos, retenciones, etc. del período.</p>
+          <p class="text-success"  id="impuestoAnual" style="font-weight: bold">$0</p>
+		  <p class="help-block">Sobre este monto se descuentan anticipos, retenciones, saldos a favor, etc..</p>
         </div>
 		
 	
